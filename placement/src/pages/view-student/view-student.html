@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ViewStudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Student Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngIf="student" >
+		<ion-item>
+        <h1> {{student[0].name}}</h1>
+        <p> Department: {{student[0].department}}</p>
+        <p>Roll Number: {{student[0].rollno}}</p>
+        <p>CGPA: {{student[0].cgpa}}</p>
+        <p>Email ID: {{student[0].emailid}}</p>
+		</ion-item>
+	</ion-card>
+
+	<button ion-button full (click)="editStudent(student[0])">
+<ion-icon name="person-add"></ion-icon>
+  Edit Student </button>
+
+</ion-content>

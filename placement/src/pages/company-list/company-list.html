@@ -1,0 +1,46 @@
+<!--
+  Generated template for the CompanyListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Companies</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addCompany()"><ion-icon name ="add"></ion-icon> </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list no-lines>
+		<ion-item-sliding *ngFor = "let company of companies">
+			<ion-item>
+				<h2>{{company.name}}</h2>
+
+			</ion-item>
+       <ion-item-options>
+              <button ion-button icon-only (click) = "viewCompany(company._id)" light> 
+                <ion-icon name = "paper"></ion-icon>
+            </button>
+            <button ion-button icon-only (click) = "deleteCompany(company._id,companies.indexOf(company))" light> 
+                <ion-icon name = "trash"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="viewEligible(company._id)">
+<ion-icon name="search"></ion-icon> 
+  </button>
+  <button ion-button icon-only (click)="viewRegistered(company._id)">
+<ion-icon name="people"></ion-icon> 
+  </button>
+            </ion-item-options>
+           
+          </ion-item-sliding>
+
+	</ion-list>
+
+
+</ion-content>

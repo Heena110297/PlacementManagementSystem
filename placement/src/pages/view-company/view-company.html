@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ViewCompanyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>View Company</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngIf="company">
+		<ion-item>
+        <h1> {{company[0].name}}</h1>
+        <p> Profile: {{company[0].profile}}</p>
+        <p>CGPA Criteria : {{company[0].cgpaCriteria}}</p>
+        <p>Email ID: {{company[0].emailid}}</p>
+		</ion-item>
+	</ion-card>
+
+	<button ion-button full (click)="editCompany(company[0])">
+<ion-icon name="person-add"></ion-icon>
+  Edit Company </button>
+
+</ion-content>

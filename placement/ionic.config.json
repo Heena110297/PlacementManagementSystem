@@ -1,0 +1,8 @@
+{
+  "name": "placement",
+  "app_id": "edf5d2a5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
